@@ -1,0 +1,54 @@
+Bill Split Notes
+
+When Checkbox is Clicked
+-get the item it's associated with
+-if checkbox is checked, then change index of owner to 1 in the item object
+== +1 to owner total
+-if checkbox is unchecked, then change the index of owner to 0 in the item object
+== -1 to owner total
+[] done
+
+Calculate()
+-do (price/ownersClaimed) to get the total for each claimed person
+-iterate through items object array
+==look at the item Objects 'claimed' attrbute [0,0,1,0,1]
+*** every time there is a 1:
+==> push the item name onto the Owner object's "claimed items" array (secondary)
+==> add the subtotal to the Owner objects 'total' attribute
+[]done
+
+OnOKButtonClick()
+-add a function to handle when user clicks OK for the 2nd time (or more)
+-if newNumUsers < currentNumUsers, delete the last owner option and last object in the array
+-if newNumUsers > currentNumUsers, add one more option after the last owner option
+    and after the last object in the owner array
+
+Make a div around the owner-option list so that a hide list button can be added
+
+addTax(t){
+     user enters a flat amount
+    --caculate the proportionate amount of tax
+    --push it as an item into each owner object
+    getProportions(t);
+
+}
+
+getProportions(){
+    beforeTaxTotal = running total;
+    proportionArray = [length num owners];
+    --iterate through array to calc each owner's proortion of subtotal
+    proportionarray[i] = float owner[i].total/beforeTaxTotal
+}
+
+TO DO
+Add a discount function
+Add a function to calculate the tip
+Disable all functions until number of participants is entered [] done
+Change functions so when user clicks out of inputbox,  
+    it takes the current input as final value []
+User doesnt enter anything into textbox []
+consolidate rename owners button into 1 button. when clicked, all input fields for owners will appear
+
+    
+
+

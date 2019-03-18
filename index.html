@@ -6,6 +6,7 @@
     <title>Bill Split</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
     <script src="owner.js"></script>
     <script src="item.js"></script>
     <script src="main.js"></script>
@@ -14,11 +15,13 @@
     <div>
         <span>How many participants will there be?</span>
         <form>
-            <input type="number" id="num-owners"/>
+            <input type="number" id="num-owners" min="1"/>
             <button type="button" id="OKbutton">OK</button>
             <div><span id="owners-result">0</span> participants</div>
         </form>
         <ul id="owner-names-list"></ul>
+        <!-- To Do: consolidate all rename owner buttons into one rename button -->
+        <!-- <button type="button" id="rename-ownerName-button" style="visibility: hidden">Rename</button> -->
     </div>
     <div id="buttons-div" style="visibility:hidden">
         <button id="add-item-button" type=Button>+ Item</button>

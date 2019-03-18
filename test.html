@@ -1,0 +1,17 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <header></header>
+    <body>
+        <div id="div1">
+                <input type="number" id="num-owners" min="1"/>
+                <input type="number" id="num" min="1"/>
+        </div>
+    </body>
+    <script>
+        const myDiv = document.getElementById("div1");
+        myDiv.addEventListener("focusout", function(){
+            myDiv.style.backgroundColor = "red";
+        })
+
+    </script>
+</html>

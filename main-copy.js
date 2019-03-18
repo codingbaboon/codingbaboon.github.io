@@ -69,28 +69,15 @@ function onOKButtonClick() {
 }
 
 function unhideButtons(){
-    //unhide the +item and calculate button
     document.getElementById("buttons-div").style.visibility = "visible";
-    //unhide the rename button (when finish cosolidating rename buttons)
-    // document.getElementById("rename-ownerName-button").style.visibility = "visible";
 }
 
 function setNameEventListeners(){
     /*Event Listener: When user clicks on change name button, input element will become visible.
     Will allow user to type in a custom name*/
 
-    /*Event Listener (part 1): Show the input field to rename owners*/
+    /*Event Listener (part 1): Show the input field*/
     const renameOwnerButtonArray = document.querySelectorAll(".renameOwnerButton");
-
-    //TO DO: Future development: consolidate all rename buttons into one button
-    // const renameOwnerButton = document.getElementById("rename-ownerName-button");
-    // renameOwnerButton.addEventListener("click", (eventTarget)=>{
-    // showInputField(1,0) //rename every element, from element 1 to length
-    // const firstOwnerInput = document.getElementById("name-input-1");
-    // firstOwnerInput.focus();
-    // });
-
-
     for(let i=0; i<renameOwnerButtonArray.length; i++){
         renameOwnerButtonArray[i].addEventListener("click", (eventTarget)=>{
             const renameOwnerButtonId = eventTarget.srcElement.id;
@@ -101,11 +88,10 @@ function setNameEventListeners(){
 
         });
     }
-
     /*Event Listener (part 2): update the owner name when input field changes*/
     const nameInputArray = document.querySelectorAll(".name-input");
     for(let i=0; i<nameInputArray.length; i++){
-        nameInputArray[i].addEventListener("focusout", (eventTarget)=>{
+        nameInputArray[i].addEventListener("blur", (eventTarget)=>{
             const nameInputId = eventTarget.srcElement.id;
             const idEnding = nameInputId.replace("name-input-","");
             updateOwnerName(idEnding);
@@ -150,13 +136,6 @@ function showInputField(idEnding, type) {
         const targetInputElem = document.getElementById("name-input-" + idEnding); 
         //changes input type from hidden to text 
         targetInputElem.type = "text";
-        // show every owner input field
-
-        //To do: future dev: part of consolidating all rename owner buttons into one button
-        // for(let i=idEnding; i<=ownersArray.length; i++){
-        //     const targetInputElem = document.getElementById("name-input-"+i);
-        //     targetInputElem.type = "text";
-        // }
     }else if(type == 1){
         targetInputElem = document.getElementById("item-name-input-" + idEnding);
         //changes input type from hidden to text 

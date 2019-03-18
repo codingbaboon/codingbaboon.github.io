@@ -1,0 +1,65 @@
+body{
+    padding: 10px;
+}
+
+#summary-wrapper{
+    border-top: solid grey 1px;
+    margin: 10px;
+    margin-top: 30px;
+
+}
+
+#running-total{
+    font-weight: bold;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+
+#add-item-button{
+    margin-right: 0;
+}
+
+#calculate-button{
+    margin-left: 0;
+}
+
+.item-header {
+    display: inline;
+}
+
+.item-price-input{
+    display: inline-block;
+}
+
+.item-price {
+    float: right;
+    font-weight: bold;
+}
+
+.item-wrap{
+    margin: 10px;
+    background: #b3d1ff;
+    border: solid grey 1px;
+    padding: 10px;
+}
+
+.owner-div{
+    margin-top: 2px;
+    padding: 5px;
+}
+
+.nickname-span{
+    font-weight: bold;
+}
+
+.ownerTotal-span{
+    font-weight: bold;  
+    float: right;
+}
+
+button {
+    margin: 3px;
+}
+
